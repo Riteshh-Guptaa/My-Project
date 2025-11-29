@@ -6,8 +6,8 @@ import Hero from "./Components/Hero";
 
 const App = () => {
   return (
-    <div className="poppins-extralight flex justify-center">
-      <div className="flex flex-col container ">
+    <div className="poppins-extralight ">
+      <div className="flex flex-col container w-screen ">
         <section>
           <Hero />
         </section>
