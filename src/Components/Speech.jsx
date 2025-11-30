@@ -1,10 +1,11 @@
 import React from 'react'
 import { TypeAnimation } from 'react-type-animation';
+import {motion} from 'motion/react'
 
 const Speech = () => {
   return (
     <div className='flex items-end !mt-[50px] gap-5'>
-     <div className='bg-white h-[80px] w-[250px] !px-4 !py-2 text-gray-600 text-[18px] rounded-l-2xl rounded-tr-2xl' > 
+     <motion.div  animate={{opacity: [0, 1]}} transition={{duration: 1,}} className='bg-white h-[80px] w-[250px] !px-4 !py-2 text-gray-600 text-[18px] rounded-l-2xl rounded-tr-2xl' > 
       <TypeAnimation
        sequence={[
          1000,
@@ -20,7 +21,7 @@ const Speech = () => {
         deletionSpeed={60}
         repeat={Infinity}
       />
-     </div>
+     </motion.div>
         <img className='bg-pink-500 h-12 w-12 rounded-b-full rounded-t-full' src="/man.png" alt="" />
     </div>
   )

@@ -7,7 +7,7 @@ import Hero from "./Components/Hero";
 const App = () => {
   return (
     <div className="poppins-extralight ">
-      <div className="flex flex-col container w-screen ">
+      <div className="flex flex-col  container; ">
         <section>
           <Hero />
         </section>
