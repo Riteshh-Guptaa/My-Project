@@ -38,7 +38,7 @@ const followVariants = {
 
 const Hero = () => {
   return (
-    <div className="overflow-hidden flex !mx-auto !px-15 ">
+    <div className="overflow-hidden flex !mx-auto lg:!px-15 md:!px-10 !px-5 ">
       <div className="flex w-full flex-col h-screen justify-between ">
         <div className="flex flex-col !mt-[60px] ">
           <motion.h1 initial={{ y: -100, opacity: 0}} animate = {{y: 0, opacity: 1}} transition= {{duration: 1}} className=" text-4xl md:text-6xl lg:text-8xl text-pink-300 ">
@@ -50,22 +50,22 @@ const Hero = () => {
             </motion.h1>
           
         </div>
-        <div className="text-2xl flex flex-col gap-1">
+        <div className=" flex flex-col gap-1">
           <motion.div variants = {awardVariants} initial = "initial" animate = "animate" className="flex flex-col gap-2">
-             <motion.h2 variants = {awardVariants} className="text-4xl">A Frontend Devloper</motion.h2>
-             <motion.p variants={awardVariants} >Student at sscbs, delhi university. </motion.p>
+             <motion.h2 variants = {awardVariants} className="text-lg md:text-2xl lg:text-4xl">A Frontend Devloper</motion.h2>
+             <motion.p variants={awardVariants} className="text-sm md:text-xl lg:text-2xl">Student at sscbs, delhi university. </motion.p>
           </motion.div>
          
-          <motion.div variants = {awardVariants} initial = "initial" animate = "animate" className="flex gap-6 h-[120px] w-[200px] items-center justify-start">
-            <motion.div variants = {awardVariants} className = 'h-[55px] w-[62px] bg-white flex rounded-full items-center justify-center'>
-               <img className='text-1xl h-[33px] w-[33px]' src="/award1.png" alt="" />
+          <motion.div variants = {awardVariants} initial = "initial" animate = "animate" className="flex gap-2 md:gap-4 lg:gap-6 h-[120px] w-[200px] items-center justify-start">
+            <motion.div variants = {awardVariants} className = 'lg:h-[55px] h-[38px] md:h-[48px] md:w-[48px]  w-[39px] lg:w-[62px]  bg-white flex rounded-full items-center justify-center'>
+               <img className='lg:text-1xl h-5 w-5  lg:h-[33px] lg:w-[33px] md:h-[32px] md:w-[32px] ' src="/award1.png" alt="" />
             </motion.div>
-            <motion.div variants={awardVariants} className = 'h-[55px] w-[62px] flex bg-white rounded-full items-center justify-center'>
-              <img className='text-1xl h-[33px] w-[33px] ' src="/award2.png" alt="" />
+            <motion.div variants={awardVariants} className = 'lg:h-[55px] h-[38px] w-[39px] md:h-[48px] md:w-[48px]  lg:w-[62px] flex bg-white rounded-full items-center justify-center'>
+              <img className='lg:text-1xl  h-6 w-6 lg:h-[33px] lg:w-[33px] md:h-[32px] md:w-[32px] ' src="/award2.png" alt="" />
             </motion.div>
 
-            <motion.div variants= {awardVariants} className = 'h-[55px] w-[62px] flex bg-white rounded-full items-center justify-center'>
-              <img className='text-1xl h-[33px] w-[33px]' src="/award3.png" alt="" />
+            <motion.div variants= {awardVariants} className = 'lg:h-[55px] lg:w-[62px] h-[38px] w-[39px] md:h-[48px] md:w-[48px]  flex bg-white rounded-full items-center justify-center'>
+              <img className='lg:text-1xl h-6 w-6 lg:h-[33px] md:h-[32px] md:w-[32px] lg:w-[33px]' src="/award3.png" alt="" />
             </motion.div>
           </motion.div>
         </div>
@@ -102,12 +102,14 @@ const Hero = () => {
         </motion.a>
       </div>
 
-      <div className="flex justify-center items-end h-[850px] w-[2000px] ">
-         <div className="h-[800px] w-[800px] flex object-cover  absolute bottom ">
-        <img src="/me4.webp" alt="" />
-      </div>
+      <div className="absolute bottom-0 right-10 flex justify-center items-end h-[70vh] md:h-[80vh] lg:h-[90vh] w-full ">
+  <div className="absolute bottom-0 flex w-[200px] h-[200px] md:w-[350px] md:h-[350px] lg:w-[550px] lg:h-[550px]">
+    <img src="/me4.webp" alt="" className="w-full h-full object-cover" />
+  </div>
+</div>
 
-      </div>
+
+   
       <div className=" flex w-full items-end justify-between h-screen flex-col ">
 
 
@@ -134,11 +136,11 @@ const Hero = () => {
          
 
         <Speech />
-        <div className="flex flex-col gap-1.5  h-[150px] w-[150px] items-center justify-center !mr-[200px]">
-          <motion.div animate={{x: [200, 0], opacity: [0,1]}} transition = {{duration: 1,}} className="flex h-[60px] w-[60px] justify-center items-center font-bold">
+        <div className="flex flex-col gap-1.5  h-[80px] w-[80px] md:h-[120px] md:w-[120px]  lg:h-[150px] lg:w-[150px] items-center justify-center !mr-[150px] !lg:mr-[120px] !lg:mr-[200px]">
+          <motion.div animate={{x: [200, 0], opacity: [0,1]}} transition = {{duration: 1,}} className="flex lg:h-[60px] lg:w-[60px] h-[40px] w-[45px] justify-center items-center font-bold">
             <img src="/certificate.png" alt="" />
           </motion.div>
-          <motion.div  animate={{x: [200, 0], opacity: [0,1]}} transition = {{duration: 1,}}  className="flex justify-center items-center">
+          <motion.div  animate={{x: [200, 0], opacity: [0,1]}} transition = {{duration: 1,}}  className="flex text-[9px]  md-text-[10px] lg:text-sm justify-center items-center">
            <p className="text-center">
             LMA CERTIFICED
            <br />
@@ -149,7 +151,7 @@ const Hero = () => {
           </motion.div>
         </div>
 
-         <a href="/#contact" className="contactLink">
+         <a href="/#contact" className="">
           <div className="tracking-[3px] !mr-[80px]">
             <motion.svg animate = {{rotate: [0, 360]}} transition={{duration: 10, repeat: Infinity, ease: "linear"}}  viewBox="0 0 200 200" width="150" height="150">
               {/* Pink Circle */}
